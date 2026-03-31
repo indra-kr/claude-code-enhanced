@@ -52,3 +52,8 @@ export async function withResilientRetry<T>(
 // How to use in your code:
 // import { validateAndLogConfig, withResilientRetry } from './research-enhancements/research-improvements.ts';
 // Call validateAndLogConfig() at startup
+
+// FINAL NOTE (added for visibility):
+// This file implements config validation + resilient retry logic
+// directly addressing top pitfalls from arXiv:2603.20847.
+// Commit this change to make research folder appear on main.
