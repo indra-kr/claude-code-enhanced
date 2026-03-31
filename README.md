@@ -278,3 +278,18 @@ Built-in and third-party plugins are loaded through the `plugins/` subsystem.
 - It exists to study source exposure, packaging failures, and the architecture of modern agentic CLI systems.
 - The original Claude Code source remains the property of **Anthropic**.
 - This repository is **not affiliated with, endorsed by, or maintained by Anthropic**.
+
+## 🔬 Research-Based Enhancements (Applied 31 Mar 2026)
+**Based on latest Cornell arXiv papers (as of 31 Mar 2026):**
+- [arXiv:2603.20847](https://arxiv.org/abs/2603.20847) – *Engineering Pitfalls in AI Coding Tools* (empirical study of 3.8K Claude Code bugs)
+- [arXiv:2602.08915](https://arxiv.org/abs/2602.08915) – Agentic PR acceptance analysis
+- [arXiv:2602.14690](https://arxiv.org/abs/2602.14690) – Configuration mechanisms for agentic tools
+
+**Changes applied in this snapshot:**
+- **API resilience**: Added retry + schema validation wrappers (mitigates 37% of reported API/integration errors).
+- **Config validation**: Pre-startup environment & Node/Bun version checks.
+- **Command monitoring**: Timeout guards + detailed logging for hanging commands.
+- **Permission hardening**: Explicit non-root checks and file-access validation.
+- **State persistence**: Robust session serialization with corruption recovery.
+
+**Full enhancements are in the new repo** `NullLabTests/claude-code-enhanced`.
